@@ -137,3 +137,12 @@ clear
 sudo systemctl start jenkins
 sudo apt install maven
 sudo systemctl restart jenkins
+clear
+ls
+git init
+git add .
+git status
+git commit -m "all"
+git push origin master
+sudo -u jenkins mv /var/lib/jenkins/workspace/3rdproject/pop.xml /var/lib/jenkins/workspace/3rdproject/pom.xml
+sudo systemctl restart jenkins

@@ -1,24 +1,27 @@
 pipeline {
-   agent any
-   stages {
-       stage('Build') {
-           steps {
-               echo "Building the project..."
-               sh 'mvn clean install'
-           }
-       }
-       stage('Test') {
-           steps {
-               echo "Running tests..."
-               sh 'mvn test'
-           }
-       }
-       stage('Deploy') {
-           steps {
-               echo "Deploying the application..."
-               sh './deploy.sh'
-           }
-       }
-   }
+    agent any
+ 
+    stages {
+        stage('build') {
+            steps {
+                sh 'mkdir -p ${WORKSPACE}/my-app'
+                sh 'cp -r /home/ubuntu/my-app/* ${WORKSPACE}/my-app/'
+                dir('my-app') {
+                    sh 'mvn clean install'
+                }
+            }
+        }
+ 
+        stage('test') {
+            steps {
+                echo 'Hi Good'
+            }
+        }
+ 
+        stage('deploy') {
+            steps {
+                echo 'Hi Everyone'
+            }
+        }
+    }
 }
-
