@@ -146,3 +146,33 @@ git commit -m "all"
 git push origin master
 sudo -u jenkins mv /var/lib/jenkins/workspace/3rdproject/pop.xml /var/lib/jenkins/workspace/3rdproject/pom.xml
 sudo systemctl restart jenkins
+cleaar
+clear
+sudo systemctl start jenkins
+ls
+nano enkinsfile
+nano Jenkinsfile
+rm Jenkinsfile
+ls
+nano Jenkinsfile
+git init
+git add .
+git commit -m "all"
+git push origin master
+clear
+ls
+clear
+ls
+mv Jenkinsfile
+mkdir my-app
+mv Jenkinsfile my-app
+cd my-app
+git init
+git add .
+git satus
+git status
+cd
+ls
+mv pop.xml my-app
+cd
+mv Jenkinsfile my-app
